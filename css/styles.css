@@ -45,11 +45,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   display: flex;
   flex-direction: column;
 }
-/*.list-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
-}*/
+
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
@@ -292,4 +288,39 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+/*** MEDIA QUERIES ***/
+
+@media (min-width: 426px) and (max-width: 600px) {
+  #restaurants-list li {
+    max-width: 330px;
+    margin: 15px auto;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .list-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1024px) {
+    #restaurants-list li {
+    max-width: 330px;
+    margin: 15px auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .list-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+  #restaurant-list li {
+    margin: 15px;
+  }
 }
