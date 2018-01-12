@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+/*Flexbox layout with grid layout for the list of restaurants*/
 
 body,td,th,p{
 	font-family: Arial, Helvetica, sans-serif;
@@ -15,7 +16,8 @@ body {
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
-	color: #333;
+  color: #333;
+  padding: 0;
 }
 a {
 	color: orange;
@@ -39,11 +41,15 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   display: flex;
   flex-direction: column;
 }
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.list-container {
+  display: flex;
+  flex-direction: column;
 }
+/*.list-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}*/
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
@@ -117,9 +123,10 @@ nav h1 a {
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
-  height: 50px;
+  height: 100%;
   background-color: #3397DB;
-  align-items: center;
+  padding-top: 10px;
+  padding-left: 15px;
 }
 .filter-options h2 {
   color: white;
@@ -135,17 +142,19 @@ nav h1 a {
   font-size: 11pt;
   height: 35px;
   letter-spacing: 0;
-  margin: 10px;
+  margin-top: 10px;
   padding: 0 10px;
   width: 200px;
 }
+#neighborhoods-select {
 
+}
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
   background-color: #f3f3f3;
   list-style: outside none none;
-  margin: 0;
-  padding: 30px 15px 60px;
+  margin: auto;
+  padding-top: 15px;
   text-align: center;
 }
 #restaurants-list li {
@@ -153,17 +162,17 @@ nav h1 a {
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
   margin: 15px;
-  min-height: 380px;
+  /*min-height: 380px;*/
   padding: 0 30px 25px;
   text-align: left;
-  width: 270px;
+  max-width: 100%;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
   display: block;
   margin: 0;
   max-width: 100%;
-  min-height: 248px;
+  /*min-height: 248px;*/
   min-width: 100%;
 }
 #restaurants-list li h1 {
