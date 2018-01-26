@@ -1,6 +1,4 @@
 @charset "utf-8";
-/* CSS Document */
-/*Flexbox layout with grid layout for the list of restaurants*/
 
 * {
   box-sizing: border-box;
@@ -46,23 +44,15 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   flex-direction: column;
 }
 
-.container-restaurant {
-  display: grid;
-}
 .list-container {
   display: flex;
   flex-direction: column;
 }
-#maincontent-restaurant {
-  margin-top: 125px;
-}
 
 #maincontent {
   background-color: #f3f3f3;
-  min-height: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 125px;
 }
 #footer {
   background-color: #444;
@@ -293,6 +283,18 @@ nav h1 a {
   color: #666;
 }
 
+/* ========================= Index Page Only ========================= */
+
+/* ========================= Restaurant Page Only ========================= */
+
+.container-restaurant {
+  display: grid;
+}
+.inside #maincontent {
+  margin-top: 125px;
+}
+
+
 /*** MEDIA QUERIES ***/
 
 @media (min-width: 426px) and (max-width: 600px) {
@@ -365,7 +367,7 @@ nav h1 a {
     margin: 15px;
   }
 
-  #maincontent-restaurant {
+  .inside #maincontent {
   display: grid;
   grid-template-columns: 450px auto;
   grid-template-rows: auto auto;
@@ -375,12 +377,12 @@ nav h1 a {
   margin-left: auto;
   margin-right: auto;
   }
-  #map {
+  .inside #map {
     height: 550px;
     max-width: 550px;
   }
 
-  #map-container {
+  .inside #map-container {
     grid-area: map;
     margin-top: 74px;
     padding: 10px 20px 30px;
