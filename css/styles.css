@@ -45,8 +45,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 }
 
 .list-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
 }
 
 #maincontent {
@@ -283,8 +282,6 @@ nav h1 a {
   color: #666;
 }
 
-/* ========================= Index Page Only ========================= */
-
 /* ========================= Restaurant Page Only ========================= */
 
 .container-restaurant {
@@ -295,19 +292,40 @@ nav h1 a {
 }
 
 
-/*** MEDIA QUERIES ***/
+/* ========================= MEDIA QUERIES ========================= */
 
+/* Index page only */
 @media (min-width: 426px) and (max-width: 600px) {
   #restaurants-list li {
     max-width: 330px;
     margin: 15px auto;
   }
 }
-@media (min-width: 426px) and (max-width: 768px) {
+
+/* Index page only */
+@media (min-width: 601px) and (max-width: 1023px) {
+  .list-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* TO DO - Overlaping media queries for 1024px??? */
+/* Index page only */
+@media (min-width: 801px) and (max-width: 1023px) {
+  #restaurants-list li {
+    max-width: 330px;
+    margin: 15px auto;
+  }
+}
+
+/* Restaurant page only */
+@media (min-width: 426px) and (max-width: 767px) {
   #restaurant-img, #restaurant-cuisine {
     max-width: 380px;
   }
 }
+
+/* Restaurant page only */
 @media (min-width: 768px)  and (max-width: 1023px){
   #restaurant-container {
     display: grid;
@@ -340,28 +358,10 @@ nav h1 a {
 
 }
 
-/*** INDEX PAGE ***/
-@media (min-width: 601px) and (max-width: 1024px) {
-  .list-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-  }
-}
-
-/* TO DO - Overlaping media queries for 1024px??? */
-@media (min-width: 801px) and (max-width: 1024px) {
-    #restaurants-list li {
-    max-width: 330px;
-    margin: 15px auto;
-  }
-}
-
+/* Index and restaurant page */
 @media (min-width: 1024px) {
   .list-container {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
   }
   #restaurant-list li {
     margin: 15px;
