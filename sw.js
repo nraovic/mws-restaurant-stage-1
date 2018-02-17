@@ -1,13 +1,11 @@
 self.addEventListener('install', function (event) {
     var urlsToCache = [
         '/',
-        '/index.html',
-        '/restaurant.html',
         '/js/dbhelper.js',
         '/js/index.js',
         '/js/main.js',
         '/js/restaurant_info.js',
-        '/data/restaurant.json',
+        '/data/restaurants.json',
         '/css/styles.css'
     ];
     event.waitUntil(caches.open('restaurant-static').then(function(cache) {
@@ -20,7 +18,7 @@ self.addEventListener('fetch', function(event) {
     event.respondWith(
         caches.match(event.request)
         .then(function (response) {
-            if (response) {return response};
+            if (response) return response;
             return fetch(event.request);
         })
     );
