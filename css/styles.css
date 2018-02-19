@@ -76,7 +76,7 @@ nav h1 {
 }
 nav h1 a {
   color: #fff;
-  font-size: 16pt;
+  font-size: 20pt;
   font-weight: 200;
   letter-spacing: 10px;
   text-transform: uppercase;
@@ -93,6 +93,7 @@ nav h1 a {
 /* Display list items side by side */
 #breadcrumb li {
     display: inline;
+    font-size: 14pt;
 }
 
 /* Add a slash symbol (/) before/behind each list item */
@@ -235,8 +236,9 @@ nav h1 a {
   border-radius: 25px 0 25px 0;
 }
 #restaurant-address {
-  font-size: 12pt;
+  font-size: 14pt;
   margin: 10px 0px;
+  font-weight: 500;
 }
 #restaurant-cuisine {
   background-color: #333;
@@ -264,8 +266,8 @@ nav h1 a {
   color: #f58500;
   font-size: 24pt;
   font-weight: 300;
-  letter-spacing: -1px;
-  padding-bottom: 1pt;
+  padding-bottom: 2pt;
+  text-transform: uppercase;
 }
 #reviews-list {
   margin: 0;
@@ -277,7 +279,7 @@ nav h1 a {
   border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
-  margin: 0 0 30px;
+  margin: 0 0 50px;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -327,6 +329,7 @@ nav h1 a {
 
 #restaurant-hours td {
   color: #666;
+  padding-right: 15px;
 }
 
 /* ========================= Restaurant Page Only ========================= */
@@ -368,14 +371,21 @@ nav h1 a {
 }
 */
 /* Restaurant page only */
+/*
 @media (min-width: 426px) and (max-width: 767px) {
   #restaurant-img, #restaurant-cuisine {
     max-width: 380px;
   }
 }
-
+*/
 /* Restaurant page only */
-@media (min-width: 768px)  and (max-width: 1023px){
+
+@media (min-width: 768px)  and (max-width: 1023px) {
+  #restaurant-container, #reviews-container {
+    width:70%;
+  }
+}
+  /*
   #restaurant-container {
     display: grid;
     grid-template-columns: 450px auto;
@@ -406,7 +416,7 @@ nav h1 a {
   }
 
 }
-
+*/
 /* Index and restaurant page */
 @media (min-width: 1024px) {
   .list-container {
@@ -422,7 +432,8 @@ nav h1 a {
   grid-template-rows: auto auto;
   grid-template-areas: 
     "restaurant map"
-    "reviews auto";
+    "reviews reviews";
+  grid-row-gap: 50px;
   }
   .inside #map {
     height: 100%;
@@ -442,5 +453,6 @@ nav h1 a {
     padding: 30px 20px 80px;
     grid-area: reviews;
     max-width: 1000px;
+    width: 70%;
   }
 }
