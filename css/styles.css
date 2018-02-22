@@ -42,6 +42,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 .container {
   display: flex;
   flex-direction: column;
+  background-color: #f3f3f3;
 }
 
 .list-container {
@@ -336,6 +337,7 @@ nav h1 a {
 
 .container-restaurant {
   display: grid;
+  background-color: #f3f3f3;
 }
 .inside #maincontent {
   margin-top: 125px;
@@ -379,10 +381,23 @@ nav h1 a {
 }
 */
 /* Restaurant page only */
-
+@media (max-width: 425px) {
+  nav h1 a {
+    font-size: 16pt;
+  }
+  #breadcrumb li,
+  .name-date-wrapper .name,
+  .name-date-wrapper .date,
+  #reviews-list li .review-text {
+    font-size: 12pt;
+  }
+  #restaurant-name, #reviews-container h2 {
+    font-size: 14pt;
+  }
+}
 @media (min-width: 768px)  and (max-width: 1023px) {
   #restaurant-container, #reviews-container {
-    width:70%;
+    width:80%;
   }
 }
   /*
@@ -419,6 +434,11 @@ nav h1 a {
 */
 /* Index and restaurant page */
 @media (min-width: 1024px) {
+  /*.wrapper {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }*/
   .list-container {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -428,7 +448,7 @@ nav h1 a {
 
   .inside #maincontent {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 40% 60%;
   grid-template-rows: auto auto;
   grid-template-areas: 
     "restaurant map"
@@ -453,6 +473,6 @@ nav h1 a {
     padding: 30px 20px 80px;
     grid-area: reviews;
     max-width: 1000px;
-    width: 70%;
+    width: 60%;
   }
 }
