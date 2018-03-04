@@ -39,7 +39,11 @@ a {
 #map area:focus, #map button:focus, #map img:focus, iframe:focus {
   outline: 2px solid #ff0000;
 }
-a:hover, a:focus, select:focus {
+a:hover {
+  color: #161514;
+}
+
+a:focus, select:focus {
 	outline: 2px solid #ff0000;
 	text-decoration: none;
 }
@@ -361,14 +365,20 @@ nav h1 a {
 /* ========================= MEDIA QUERIES ========================= */
 
 /* Index page only */
-/*
-@media (min-width: 426px) and (max-width: 600px) {
+/*Position Viw Details label absolutely because they are not aligned if the text above squeezes into more lines*/
+
+@media (min-width: 601px) and (max-width: 685px) {
   #restaurants-list li {
-    max-width: 330px;
-    margin: 15px auto;
+    position: relative;
+    min-height: 400px;
+  }
+  #restaurants-list li a{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
   }
 }
-*/
+
 /* Index page only */
 @media (min-width: 601px) and (max-width: 1023px) {
   .list-container {
@@ -394,6 +404,11 @@ nav h1 a {
   }
 }
 */
+@media (min-width: 601px) and (max-width: 768px) {
+  #restaurants-list li h3{
+    font-size: 12pt;
+  }
+}
 /* Restaurant page only */
 @media (max-width: 425px) {
   nav h1 a {
