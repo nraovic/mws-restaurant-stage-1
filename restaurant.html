@@ -58,6 +58,14 @@
     <!-- End footer -->
 
     <!-- Beginning scripts -->
+    <!-- Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+          .register('/sw.js')
+          .then(function () { console.log("Service Worker Registered"); });
+      }
+    </script>
     <!-- Database helpers -->
     <script type="text/javascript" src="js/dbhelper.js"></script>
     <!-- Main javascript file -->
