@@ -36,17 +36,24 @@ a {
   left: 10px;
 }
 /*Change focus style for Google Maps elements*/
+/*
 #map area:focus, #map button:focus, #map img:focus, iframe:focus {
   outline: 2px solid #ff0000;
 }
-a:hover {
-  color: #161514;
-}
-
+*/
 a:focus, select:focus {
-	outline: 2px solid #ff0000;
+	outline: 2px solid #0044ff;
 	text-decoration: none;
 }
+
+a:focus:hover, select:focus:hover {
+  outline:0;
+}
+a:hover{
+  color: #97612a;
+  text-decoration: none;
+}
+
 a img{
 	border: none 0px #fff;
 }
@@ -365,7 +372,7 @@ nav h1 a {
 /* ========================= MEDIA QUERIES ========================= */
 
 /* Index page only */
-/*Position Viw Details label absolutely because they are not aligned if the text above squeezes into more lines*/
+/*Position View Details label absolutely because they are not aligned if the text above squeezes into more lines*/
 
 @media (min-width: 601px) and (max-width: 685px) {
   #restaurants-list li {
@@ -387,23 +394,7 @@ nav h1 a {
 }
 
 /* TO DO - Overlaping media queries for 1024px??? */
-/* Index page only */
-/*
-@media (min-width: 801px) and (max-width: 1023px) {
-  #restaurants-list li {
-    max-width: 330px;
-    margin: 15px auto;
-  }
-}
-*/
-/* Restaurant page only */
-/*
-@media (min-width: 426px) and (max-width: 767px) {
-  #restaurant-img, #restaurant-cuisine {
-    max-width: 380px;
-  }
-}
-*/
+
 @media (min-width: 601px) and (max-width: 768px) {
   #restaurants-list li h3{
     font-size: 12pt;
@@ -429,38 +420,7 @@ nav h1 a {
     width:80%;
   }
 }
-  /*
-  #restaurant-container {
-    display: grid;
-    grid-template-columns: 450px auto;
-    grid-template-rows: auto;
-    grid-column-gap: 20px;
-    grid-row-gap: 5px;
-    grid-template-areas: 
-    "name name"
-    "image address"
-    "image hours"
-    "cuisine auto"
-  }
-
-  #restaurant-name {
-    grid-area: name;
-  }
-  #restaurant-img {
-    grid-area: image;
-  }
-  #restaurant-cuisine{
-    grid-area: cuisine;
-  }
-  #restaurant-address{
-    grid-area: address;
-  }
-  #restaurant-hours{
-    grid-area: hours;
-  }
-
-}
-*/
+  
 /* Index and restaurant page */
 @media (min-width: 1024px) {
   /*.wrapper {
