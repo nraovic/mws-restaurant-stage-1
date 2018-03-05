@@ -6,7 +6,9 @@ self.addEventListener('install', function (event) {
         '/js/main.js',
         '/js/restaurant_info.js',
         '/data/restaurants.json',
-        '/css/styles.css'
+        '/css/styles.css',
+        '/index.html',
+        '/restaurant.html',
     ];
     event.waitUntil(caches.open('restaurant-static').then(function(cache) {
         cache.addAll(urlsToCache);
