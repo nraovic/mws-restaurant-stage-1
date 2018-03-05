@@ -10,21 +10,25 @@ body,td,th,p{
 	color: #333;
 	line-height: 1.5;
 }
+
 body {
 	background-color: #fdfdfd;
 	margin: 0;
 	position:relative;
 }
+
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
   color: #333;
   padding: 0;
 }
+
 a {
 	color: orange;
 	text-decoration: none;
 }
+
 .skip-link {
   position: absolute;
   top: 10px;
@@ -35,12 +39,7 @@ a {
 .skip-link:focus {
   left: 10px;
 }
-/*Change focus style for Google Maps elements*/
-/*
-#map area:focus, #map button:focus, #map img:focus, iframe:focus {
-  outline: 2px solid #ff0000;
-}
-*/
+
 a:focus, select:focus {
 	outline: 2px solid #0044ff;
 	text-decoration: none;
@@ -57,13 +56,16 @@ a:hover{
 a img{
 	border: none 0px #fff;
 }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 0 20px;
 }
+
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -79,6 +81,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   display: flex;
   flex-direction: column;
 }
+
 #footer {
   background-color: #444;
   color: #aaa;
@@ -88,6 +91,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   text-align: center;
   text-transform: uppercase;
 }
+
 /* ====================== Navigation ====================== */
 nav {
   width: 100%;
@@ -97,9 +101,11 @@ nav {
   display: flex;
   align-items: center;
 }
+
 nav h1 {
   margin: auto;
 }
+
 nav h1 a {
   color: #fff;
   font-size: 20pt;
@@ -107,6 +113,7 @@ nav h1 a {
   letter-spacing: 10px;
   text-transform: uppercase;
 }
+
 #breadcrumb {
     padding: 10px 20px;
     list-style: none;
@@ -140,12 +147,14 @@ nav h1 a {
     color: #01447e;
     text-decoration: underline;
 }
+
 /* ====================== Map ====================== */
 #map {
   height: 500px;
   width: 100%;
   background-color: #ccc;
 }
+
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
@@ -160,6 +169,7 @@ nav h1 a {
   padding-top: 10px;
   padding-left: 15px;
 }
+
 .filter-options h2 {
   color: white;
   font-size: 1rem;
@@ -167,6 +177,7 @@ nav h1 a {
   line-height: 1;
   margin: 0;
 }
+
 .filter-options select {
   background-color: white;
   border: 1px solid #fff;
@@ -187,6 +198,7 @@ nav h1 a {
   padding-top: 15px;
   text-align: center;
 }
+
 #restaurants-list li {
   background-color: #fff;
   border: 2px solid #ccc;
@@ -198,6 +210,7 @@ nav h1 a {
   max-width: 100%;
   border-radius: 25px 0 25px 0;
 }
+
 #restaurants-list .restaurant-img {
   background-color: #ccc;
   display: block;
@@ -207,6 +220,7 @@ nav h1 a {
   min-width: 100%;
   border-radius: 25px 0 25px 0;
 }
+
 #restaurants-list li h3 {
   color: #f18200;
   font-family: Arial,sans-serif;
@@ -217,10 +231,12 @@ nav h1 a {
   margin: 20px 0 10px;
   text-transform: uppercase;
 }
+
 #restaurants-list p {
   margin: 0;
   font-size: 11pt;
 }
+
 #restaurants-list li a {
   background-color: orange;
   /*border-bottom: 3px solid #eee;*/
@@ -247,6 +263,7 @@ nav h1 a {
   position: absolute;
   width: 100%;
 }
+
 #restaurant-name {
   color: #f18200;
   font-family: Arial,sans-serif;
@@ -257,15 +274,18 @@ nav h1 a {
   text-transform: uppercase;
   line-height: 1.1;
 }
+
 #restaurant-img {
   width: 100%;
   border-radius: 25px 0 25px 0;
 }
+
 #restaurant-address {
   font-size: 14pt;
   margin: 10px 0px;
   font-weight: 500;
 }
+
 #restaurant-cuisine {
   background-color: #333;
   color: #ddd;
@@ -278,9 +298,11 @@ nav h1 a {
   text-transform: uppercase;
 	width: 100%;
 }
+
 #restaurant-container {
   padding: 10px 20px 30px;
 }
+
 #restaurant-container, #reviews-container {
   width: 100%;
 }
@@ -288,6 +310,7 @@ nav h1 a {
 #reviews-container {
   padding: 30px 20px 80px;
 }
+
 #reviews-container h2 {
   color: #f58500;
   font-size: 24pt;
@@ -295,6 +318,7 @@ nav h1 a {
   padding-bottom: 2pt;
   text-transform: uppercase;
 }
+
 #reviews-list {
   margin: 0;
   padding: 0;
@@ -316,11 +340,13 @@ nav h1 a {
   padding: 10px 25px;
   margin: 0;
 }
+
 #reviews-list li .name-date-wrapper {
   background-color: #333;
   overflow: hidden;
   padding: 30px;
 }
+
 .name-date-wrapper .name {
   float: left;
   font-size: 16pt;
@@ -364,25 +390,32 @@ nav h1 a {
   display: grid;
   background-color: #f3f3f3;
 }
+
 .inside #maincontent {
   margin-top: 125px;
 }
 
-
 /* ========================= MEDIA QUERIES ========================= */
 
 /* Index page only */
-/*Position View Details label absolutely because they are not aligned if the text above squeezes into more lines*/
-
+/* Position View Details labels absolutely because they become misaligned 
+ * if the text in the paragraph above takes up more more than a line */
 @media (min-width: 601px) and (max-width: 685px) {
   #restaurants-list li {
     position: relative;
     min-height: 400px;
   }
+
   #restaurants-list li a{
     position: absolute;
     bottom: 15px;
     left: 15px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 768px) {
+  #restaurants-list li h3{
+    font-size: 12pt;
   }
 }
 
@@ -393,28 +426,24 @@ nav h1 a {
   }
 }
 
-/* TO DO - Overlaping media queries for 1024px??? */
-
-@media (min-width: 601px) and (max-width: 768px) {
-  #restaurants-list li h3{
-    font-size: 12pt;
-  }
-}
 /* Restaurant page only */
 @media (max-width: 425px) {
   nav h1 a {
     font-size: 16pt;
   }
+
   #breadcrumb li,
   .name-date-wrapper .name,
   .name-date-wrapper .date,
   #reviews-list li .review-text {
     font-size: 12pt;
   }
+
   #restaurant-name, #reviews-container h2 {
     font-size: 14pt;
   }
 }
+
 @media (min-width: 768px)  and (max-width: 1023px) {
   #restaurant-container, #reviews-container {
     width:80%;
@@ -423,27 +452,24 @@ nav h1 a {
   
 /* Index and restaurant page */
 @media (min-width: 1024px) {
-  /*.wrapper {
-    max-width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
-  }*/
   .list-container {
     grid-template-columns: repeat(3, 1fr);
   }
+
   #restaurant-list li {
     margin: 15px;
   }
-
+  
   .inside #maincontent {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  grid-template-rows: auto auto;
-  grid-template-areas: 
-    "restaurant map"
-    "reviews reviews";
-  grid-row-gap: 50px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+      "restaurant map"
+      "reviews reviews";
+    grid-row-gap: 50px;
   }
+
   .inside #map {
     height: 100%;
     width: 100%;
@@ -455,9 +481,11 @@ nav h1 a {
     padding: 10px 20px 30px;
     width: 100%;
   }
+
   #restaurant-container {
     grid-area: restaurant;
   }
+  
   #reviews-container {
     padding: 30px 20px 80px;
     grid-area: reviews;
