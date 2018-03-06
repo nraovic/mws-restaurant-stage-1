@@ -447,6 +447,8 @@ nav h1 a {
 @media (min-width: 768px)  and (max-width: 1023px) {
   #restaurant-container, #reviews-container {
     width:80%;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
   
@@ -462,23 +464,21 @@ nav h1 a {
   
   .inside #maincontent {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: auto auto;
     grid-template-areas: 
       "restaurant map"
-      "reviews reviews";
-    grid-row-gap: 50px;
+      "reviews auto";
   }
 
   .inside #map {
-    height: 100%;
+    height: 100vh;
     width: 100%;
+    position: fixed !important;
   }
 
   .inside #map-container {
     grid-area: map;
-    margin-top: 74px;
-    padding: 10px 20px 30px;
     width: 100%;
   }
 
@@ -487,9 +487,7 @@ nav h1 a {
   }
   
   #reviews-container {
-    padding: 30px 20px 80px;
     grid-area: reviews;
     max-width: 1000px;
-    width: 60%;
   }
 }
