@@ -114,7 +114,7 @@ nav h1 a {
   text-transform: uppercase;
 }
 
-#breadcrumb {
+#breadcrumb, nav.breadcrumb {
     padding: 10px 20px;
     list-style: none;
     background-color: #eee;
@@ -147,7 +147,11 @@ nav h1 a {
     color: #01447e;
     text-decoration: underline;
 }
-
+#breadcrumb [aria-current="page"] {
+  color: #252831;
+  font-weight: 700;
+  text-decoration: none;
+}
 /* ====================== Map ====================== */
 #map {
   height: 500px;
